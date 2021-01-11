@@ -1,0 +1,52 @@
+a {
+    @extend .text-dark-gray
+}
+
+.drop-shadow {
+    box-shadow: 0 3px 30px rgba(151, 176, 187, .16);
+}
+
+ul {
+    padding-left: 0;
+    list-style: none
+}
+
+.sidebar-list {
+    li {
+        a {
+            padding: 12px 20px;
+            display: block;
+
+            border-left: 4px solid rgba(0, 0, 0, 0);
+
+            border-radius: 4px;
+
+            &.active {
+                background: #FFF;
+                border-left-color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+}
+
+.r-4 {
+    border-radius: 4px
+}
+
+.r-6 {
+    border-radius: 6px
+}
+
+.r-8 {
+    border-radius: 4px
+}
+
+.r-10 {
+    border-radius: 10px
+}
+
+@media(min-width:1366px) {
+    .container {
+        max-width: 1336px
+    }
+}

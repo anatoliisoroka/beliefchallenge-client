@@ -1,0 +1,234 @@
+@import 'fonts';
+
+$green: #dc3545;
+$blue: #267ED4;
+$light-blue: #F5FAFC;
+$dark-gray : #1b1b1b;
+
+
+$primary : $green;
+$secondary : $blue;
+$dark : $dark-gray;
+
+$colors: (red: #F16464,
+  green-2: $green,
+  blue: $blue,
+  dark-gray: #3E4868,
+  blue-2: #2f4898,
+  blue-3: #212d3b,
+  white: #ffffff,
+  yellow: #f9c816,
+  light-blue: #F5FAFC,
+  gray-1: #f7f7f7,
+  gray-2: #949494,
+  gray-3: #7a8087);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(("red": map-get($colors, red),
+    "blue-2": map-get($colors, blue-2)),
+  $theme-colors);
+
+$fontSizer: (10, 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 35, 36, 38, 40, 42, 44, 45, 50, 70, 80);
+$fontWeight: (300, 400, 600, 700, 900);
+
+@each $colorKey,
+$colorName in $colors {
+  .text-#{$colorKey} {
+    color: $colorName !important;
+  }
+
+  .bg-#{$colorKey} {
+    background-color: $colorName !important;
+  }
+
+  .border-#{$colorKey} {
+    background-color: $colorName !important;
+  }
+}
+
+@each $fontsize in $fontSizer {
+  .fz-#{$fontsize} {
+    font-size: #{$fontsize}px !important;
+  }
+}
+
+@each $fontweight in $fontWeight {
+  .fw-#{$fontweight} {
+    font-weight: #{$fontweight} !important;
+  }
+}
+
+$spacers: () !default;
+$spacers: map-merge((5: 5px,
+    10: 10px,
+    15: 15px,
+    20: 20px,
+    25: 25px,
+    30: 30px,
+    35: 35px,
+    40: 40px,
+    45: 45px,
+    50: 50px,
+    55: 55px,
+    60: 60px,
+    65: 65px,
+    70: 70px,
+    75: 75px,
+    80: 80px,
+    85: 85px,
+    90: 90px,
+    95: 95px,
+    100: 100px),
+  $spacers);
+
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+
+.beige {
+  .box {
+    background: #dbaf6e
+  }
+}
+
+.blue {
+  .box {
+    background: #0059b2
+  }
+}
+
+.brown {
+  .box {
+    background: #994200
+  }
+}
+
+.yellow {
+  .box {
+    background: #f7c81e
+  }
+}
+
+.gray {
+  .box {
+    background: #949494
+  }
+}
+
+.green {
+  .box {
+    background: #38a614
+  }
+}
+
+.red {
+  .box {
+    background: #d91a2a
+  }
+}
+
+.black {
+  .box {
+    background: #000
+  }
+}
+
+
+.voilet {
+  .box {
+    background: #991289
+  }
+}
+
+.gray,
+.Gray {
+  .box {
+    background: #AAA
+  }
+}
+
+.white {
+  .box {
+    background: #FFF
+  }
+}
+
+.orange {
+  .box {
+    background: #ff7500
+  }
+}
+
+.silver {
+  .box {
+    background: linear-gradient(#dcdcdc, #acacac);
+  }
+}
+
+.gold {
+  .box {
+    background: linear-gradient(#f7e994, #d9a600);
+  }
+}
+
+.bronze {
+  .box {
+    background: linear-gradient(#f7c694, #bf7326)
+  }
+}
+
+.colors {
+  .styled-check {
+    .box {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      padding: 10px;
+      border: 0 solid;
+      border: 2px solid #FFF;
+
+      &:before,
+      &:after {
+        background: inherit;
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height: calc(100% + 8px);
+        border-radius: 100%;
+        left: -4px;
+        top: -4px;
+      }
+
+      &:after {
+        background: transparent;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        left: -2px;
+        top: -2px;
+        z-index: 0;
+        border: 2px solid #EEE;
+      }
+    }
+
+    .text {
+      width: calc(100% - 50px);
+      line-height: 29px;
+      vertical-align: top;
+    }
+
+    input:checked+.box+.text {
+      color: #000;
+    }
+  }
+
+  >span {
+    width: 50%;
+    float: left;
+  }
+}

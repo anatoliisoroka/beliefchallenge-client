@@ -1,0 +1,43 @@
+$font-path: "../fonts";
+
+@font-face {
+  font-family: segoeui;
+  src: url("../fonts/segoeui/segoeui.ttf");
+}
+
+@font-face {
+  font-family: segoeui-bold;
+  src: url("../fonts/segoeui/segoeuib.ttf");
+}
+
+@font-face {
+  font-family: segoeui-semibold;
+  src: url("../fonts/segoeui/seguisb.ttf");
+}
+
+
+
+.text-bold {
+  font-family: segoeui-bold,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: bold
+}
+
+.text-semibold {
+  font-family: segoeui-semibold,
+    Arial,
+    Helvetica,
+    sans-serif !important;
+  font-weight: 600 !important
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .text-bold;
+}
